@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift File.join(File.expand_path(File.dirname(__FILE__)))
+
+require 'drb'
+require 'storage'
+require 'app'
+
+DRb.start_service("druby://localhost:#{App.config['messaging_port']}", Storage.new)
+puts "Messaging server started on #{DRb.uri}"
+DRb.thread.join	
+

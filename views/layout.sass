@@ -1,0 +1,82 @@
+!body_height = 94%
+
+=box
+  :margin 5px
+  :padding 7px
+
+=inner_box_bg
+  :background-color #9AA0A2  
+  
+=fl
+  :float left
+
+=fr
+  :float right
+  
+=clear
+  :clear both
+  
+html
+  height = !body_height 
+  
+body
+  height = !body_height
+  :font
+    :family Verdana
+    :size 14px
+  :background-color #AAA
+  
+hr 
+  :background-color black
+  :border none
+  :height 1px
+  
+h3
+  :background-color #EEE
+  :text-align center
+  +box
+  
+a
+  :text-decoration none
+    
+#main_area
+  :background-color #DDD
+  :height 100%
+  +box
+  
+.chat_data_element
+  +fl
+  +box
+  +inner_box_bg
+    
+#chat_url
+  color: #DDD
+  
+#chat_area
+  :height 84%
+  :overflow auto
+  
+#chat_controls
+  :padding 7px
+  +inner_box_bg
+  
+.message_box
+  +box
+  +inner_box_bg  
+
+.message_author
+  +fl
+  a
+    color: #DDD
+  
+.message_time
+  +fr
+
+.message
+  :margin-top 5px
+  
+input.message
+  :width 92%
+
+.clear
+  +clear

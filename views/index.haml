@@ -1,0 +1,16 @@
+= js do
+  = "room_id='#{room_id}';"
+  last_time = 0;
+  username = null;
+  message_counter = 0;
+  jQuery(document).ready(function() { initChat(); });
+.chat_data_element
+  #nickname
+.chat_data_element
+  %a{:id => 'chat_url'}
+.clear
+#chat_area
+#chat_controls
+  %input{:type => 'text', :id => 'message', :class => 'message'}
+  %input{:type => 'button', :id => 'send', :class => 'send', :value => 'Send'}  
+  
